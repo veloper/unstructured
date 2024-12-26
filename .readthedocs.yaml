@@ -1,4 +1,5 @@
 version: 2
+
 build:
   os: ubuntu-22.04
   tools:
@@ -11,10 +12,10 @@ python:
   install:
     - requirements: docs/requirements.txt
     - method: pip
-      path:.
+      path: .
 
 formats:
   - htmlzip
-
+  
 submodules:
   include: all
