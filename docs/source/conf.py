@@ -36,11 +36,22 @@ extensions = [
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
+# Settings for multi-page HTML and image exclusion
+html_split_index = True
+html_baseurl = '/'
+html_file_suffix = '.html'
+
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
-
+exclude_patterns = [
+    '**/images/*',
+    '**/*.png',
+    '**/*.jpg',
+    '**/*.jpeg',
+    '**/*.gif',
+    '**/*.svg',
+]
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -52,7 +63,7 @@ html_theme = "furo"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
+html_static_path = []
 
 # Adding a custom css file in order to add custom css file and can change the necessary elements.
 # custom css and js for kapa.ai integration
